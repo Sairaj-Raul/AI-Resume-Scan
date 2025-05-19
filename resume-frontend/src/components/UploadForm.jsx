@@ -35,7 +35,7 @@ export default function UploadForm() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:3000/resume/analyze",
+        `${import.meta.env.VITE_API_BASE_URL}/resume/analyze`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
